@@ -204,6 +204,17 @@ curl -X POST localhost:8000/ask -H "Content-Type: application/json" \
 curl -X POST localhost:8000/add-document -H "Content-Type: application/json" \
   -d '{"doc_id": "new_policy", "text": "...", "strategy": "both"}'
 ```
+PowerShell (`curl` there is aliased to `Invoke-WebRequest`, with different
+flags, so use `Invoke-RestMethod` instead):
+```powershell
+Invoke-RestMethod -Method Post -Uri http://localhost:8000/ask `
+  -ContentType "application/json" `
+  -Body '{"query": "What documents do I need for KYC verification?"}'
+
+Invoke-RestMethod -Method Post -Uri http://localhost:8000/add-document `
+  -ContentType "application/json" `
+  -Body '{"doc_id": "new_policy", "text": "...", "strategy": "both"}'
+```
 `/ws/chat` is a raw WebSocket, not curl-testable — use a WS client, or see
 `scripts/demo_part3_task11_api.py` for an in-process `TestClient` example.
 
