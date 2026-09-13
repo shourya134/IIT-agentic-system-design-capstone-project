@@ -105,7 +105,21 @@ class MockBrain:
             sources.extend(s.strip() for s in m.group(1).split(",") if s.strip())
 
         confidence = 0.3 if "don't have enough information" in task_text else 0.85
-        answer_text = task_text.strip()
+
+        # task_text is CrewAI's full composer prompt: "Current Task: ...",
+        # the expected-output criteria block, then (per crewai/utilities/
+        # formatter.py::DIVIDERS) "This is the context you're working
+        # with:\n" + retrieval_output + "\n\n----------\n\n" + lookup_output,
+        # then a trailing "Provide your complete response:". The actual
+        # answer is only that chained context, not the surrounding CrewAI
+        # prompt scaffolding.
+        context_marker = "This is the context you're working with:\n"
+        trailing_marker = "\n\nProvide your complete response:"
+        start = task_text.find(context_marker)
+        start = start + len(context_marker) if start != -1 else 0
+        end = task_text.find(trailing_marker, start)
+        end = end if end != -1 else len(task_text)
+        answer_text = task_text[start:end].replace("\n\n----------\n\n", " ").strip()
         return json.dumps({"answer": answer_text, "sources": sorted(set(sources)), "confidence": confidence})
 
     # -- Task 8: LangChain session-memory chat (no tools, history-aware) --
