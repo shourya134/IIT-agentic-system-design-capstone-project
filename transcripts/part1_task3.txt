@@ -1,0 +1,10 @@
+Part 1, Task 3: Two chunking strategies, indexed into two Chroma collections
+Fixed-size chunks (with overlap): 72
+Sentence-based chunks: 35
+Example fixed chunk: account_closure::fixed::0 -> 'A customer may request account closure by submitting a signed closure form along with their unused chequebook and debit '
+Example sentence chunk: account_closure::sentence::0 -> 'A customer may request account closure by submitting a signed closure form along with their unused chequebook and debit '
+'kb_fixed' collection count: 73
+'kb_sentence' collection count: 37
+Sample query against both collections: 'What documents do I need for KYC verification?'
+  kb_fixed top result: doc_id=kyc_requirements similarity=0.6484
+  kb_sentence top result: doc_id=kyc_requirements similarity=0.5250

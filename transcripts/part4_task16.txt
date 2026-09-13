@@ -1,0 +1,6 @@
+Part 4, Task 16: response caching keyed by normalized query text
+Query: 'What documents do I need for KYC verification?'
+1st call: cache_hit=False elapsed=0.04383s underlying_generation_calls=1
+2nd call (same query, different case/whitespace): cache_hit=True elapsed=0.00002s underlying_generation_calls=1
+PASS: underlying generation ran exactly 1 time(s) across 2 identical queries -- the second call was served entirely from cache (before/after evidence: call count stayed at 1, not 2).
+cache stats: {'hits': 1, 'misses': 1, 'entries': 1}

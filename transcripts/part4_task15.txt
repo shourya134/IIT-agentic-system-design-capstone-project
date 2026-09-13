@@ -1,0 +1,17 @@
+Part 4, Task 15: 4-layer governance, least-autonomy enforcement, runtime budget cap
+--- Application layer: least-autonomy enforcement ---
+  retrieval_agent: does not have lookup tool
+  lookup_agent: HAS lookup tool
+  composer_agent: does not have lookup tool
+Least-autonomy check: PASS (owners=['lookup_agent'])
+--- Risk classification ---
+Level: Medium-High
+Justification: This system handles fixed-format PII (PAN/Aadhaar/bank account numbers) and financial data (loan status, loan amount, a fraud-review flag and escalation score) about real-seeming member records, which places it above Low risk (simple summarization/transcription) and into the Medium/High financial-data band described in the scenario's risk scheme. It stops short of the most severe High-risk examples (e.g. medical data or automated hiring/credit decisions) because under MOCK_LLM it makes no real money-movement, autonomous approval/denial, or external API calls -- it only surfaces existing record status and policy text for a human support agent to act on. We therefore classify it Medium-High: strict PII-masking, logging, and human-in-the-loop review (the Autogen stage) are required, matching the caution owed to financial-data systems.
+--- 4-layer governance model ---
+  Data: PII masking at ingestion and before any logging (crew/guardrails.py + api/logging_utils.py).
+  Application: Least-autonomy tool scoping: only the Lookup Agent holds check_loan_application_status.
+  Runtime: Per-request token/cost budget cap (governance/budget.py); guardrail refusals before crew execution.
+  Compliance: Autogen review stage (review/autogen_review.py) plus an append-only JSONL audit log with trace IDs.
+--- Runtime layer: per-request budget cap ---
+Normal request estimated total: 266 tokens -> accepted
+Oversized request correctly rejected: Estimated request cost (23256 tokens) exceeds the per-request budget cap (2000 tokens). Input alone was estimated at 23000 tokens.

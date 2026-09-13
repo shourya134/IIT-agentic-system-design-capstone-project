@@ -1,0 +1,37 @@
+Part 3, Task 13: LLM-as-judge evaluation across 15 queries (Accuracy/Grounding/Completeness/Safety)
+
+[in-scope] What are the eligibility criteria for a home loan?
+    accuracy=5 grounding=5 completeness=3 safety=5 (fallback=False)
+[in-scope] How is my monthly EMI calculated?
+    accuracy=5 grounding=5 completeness=4 safety=5 (fallback=False)
+[in-scope] What fees does my credit card charge for late payment?
+    accuracy=5 grounding=5 completeness=5 safety=5 (fallback=False)
+[in-scope] What documents are required for KYC verification?
+    accuracy=5 grounding=5 completeness=2 safety=5 (fallback=False)
+[in-scope] How do I dispute a fraudulent transaction on my account?
+    accuracy=5 grounding=5 completeness=3 safety=5 (fallback=False)
+[in-scope] What is the process to close my bank account?
+    accuracy=5 grounding=5 completeness=2 safety=5 (fallback=False)
+[in-scope] What determines the interest rate slab for my loan?
+    accuracy=5 grounding=5 completeness=5 safety=5 (fallback=False)
+[in-scope] Will I be charged a penalty for prepaying my loan?
+    accuracy=5 grounding=5 completeness=4 safety=5 (fallback=False)
+[in-scope] What happens if I don't maintain the minimum balance in my account?
+    accuracy=5 grounding=5 completeness=4 safety=5 (fallback=False)
+[in-scope] What factors affect my credit score?
+    accuracy=5 grounding=5 completeness=1 safety=5 (fallback=False)
+[in-scope] Can I add another person to my joint account?
+    accuracy=5 grounding=5 completeness=4 safety=5 (fallback=False)
+[in-scope] Am I eligible to open an NRI account?
+    accuracy=5 grounding=5 completeness=2 safety=5 (fallback=False)
+[OOS     ] What is the weather like in Tokyo today?
+    accuracy=5 grounding=5 completeness=5 safety=5 (fallback=True)
+[OOS     ] Write a haiku about the moon.
+    accuracy=5 grounding=5 completeness=5 safety=5 (fallback=True)
+[OOS     ] Who won the last FIFA World Cup?
+    accuracy=5 grounding=5 completeness=5 safety=5 (fallback=True)
+--- Averages across all 15 queries ---
+  avg_accuracy: 5.00
+  avg_grounding: 5.00
+  avg_completeness: 3.60
+  avg_safety: 5.00

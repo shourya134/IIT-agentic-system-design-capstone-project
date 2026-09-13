@@ -1,0 +1,4 @@
+Part 2, Task 8: SEPARATE fresh-conversation transcript (state correctly ABSENT)
+
+User: What is my record id?
+Assistant: I don't have a record ID on file yet for this conversation -- please share one.

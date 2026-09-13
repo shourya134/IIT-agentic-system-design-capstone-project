@@ -1,0 +1,36 @@
+Part 1, Task 4: Empirical threshold calibration + grounded generation
+Calibration measurements (top-1 similarity):
+  in-scope   0.5250  What documents do I need for KYC verification?
+  in-scope   0.5352  How is my EMI calculated?
+  in-scope   0.6883  What happens if I miss a credit card payment fee?
+  in-scope   0.6356  Can I close my savings account anytime?
+  in-scope   0.7017  Is there a penalty for prepaying my home loan early?
+  out-of-scope 0.0800  What is the weather like in Paris today?
+  out-of-scope 0.1530  Write me a short poem about the ocean.
+  out-of-scope 0.0782  What is the capital of Australia?
+Lowest in-scope similarity: 0.5250
+Highest out-of-scope similarity: 0.1530
+Recommended threshold (midpoint): 0.3390
+config.SIMILARITY_THRESHOLD currently set to: 0.339
+NOTE: if the recommended threshold above differs from config.SIMILARITY_THRESHOLD, update config.py's SIMILARITY_THRESHOLD to match and re-run this script, then cite the final numbers in README.md.
+
+Demonstrating on 5 in-scope queries + 1 out-of-scope query:
+Q: What documents do I need for KYC verification?
+  top1_similarity=0.5250 is_fallback=False
+  A: Every applicant must submit a valid government-issued photo identity proof, such as a PAN card, Aadhaar card, or passport, before any loan or account application can be processed. Address proof is required separately and may be satisfied by a recent utility bill, rental agreement, or Aadhaar card if it carries the current address. A joint account can be opened by two or more individuals, most commonly spouses, family members, or business partners, and each holder must independently complete KYC verification before the account is activated. The mode of operation, chosen at account opening, determines how transactions are authorized: "either or survivor" allows any one holder to operate the account independently, while "jointly" requires all named holders to sign off on transactions. (Source(s): joint_account_rules, kyc_requirements)
+Q: How is my EMI calculated?
+  top1_similarity=0.5352 is_fallback=False
+  A: The Equated Monthly Installment (EMI) is calculated using the reducing-balance formula: EMI = P x r x (1+r)^n / ((1+r)^n - 1), where P is the principal amount, r is the monthly interest rate, and n is the total number of monthly installments. Interest is charged only on the outstanding principal for that month, so the interest component of each EMI decreases over the loan tenure while the principal component increases. Payment history is the single largest factor influencing a credit score, so even one missed or late EMI or credit card payment can cause a noticeable drop that takes several months of on-time payments to recover from. Credit utilization, meaning the proportion of the available credit limit currently being used, is the next major factor, and consistently keeping utilization below 30% of the total limit helps maintain a healthy score. The customer receives a closure confirmation and a final statement showing the balance transfer or payout of the remaining funds within 7 working days. (Source(s): account_closure, credit_score_factors, emi_calculation)
+Q: What fees apply to my credit card?
+  top1_similarity=0.6880 is_fallback=False
+  A: Credit cards carry an annual joining and renewal fee that varies by card tier, though many entry-level cards waive this fee once annual spending crosses a specified threshold. A late-payment fee is charged when the minimum amount due is not paid by the due date, scaled in slabs based on the outstanding balance, and typically ranges from INR 100 for small balances to INR 1,300 for balances above INR 50,000. The minimum balance requirement and applicable penalty are disclosed in the account's schedule of charges at the time of account opening. (Source(s): credit_card_fees, minimum_balance)
+Q: Can I close my savings account anytime?
+  top1_similarity=0.6356 is_fallback=False
+  A: Accounts closed within 14 days of opening, sometimes called a cooling-off period, typically do not attract a closure fee, while accounts closed after that window may incur a closure charge depending on the account type and how long it has been open. Any standing instructions, auto-debit mandates, or linked recurring deposits must be canceled or transferred beforehand, since closure automatically terminates them. Savings accounts require the customer to maintain a minimum monthly average balance, which varies by account type and branch location, commonly ranging from INR 1,000 for basic accounts to INR 10,000 or more for premium accounts. Failure to maintain the required average balance results in a non-maintenance charge being deducted at the end of the billing cycle, typically calculated as a percentage of the shortfall rather than a flat fee. Account holders must promptly update their residency status if it changes, since operating a resident savings account after becoming an NRI is not permitted under regulatory rules. (Source(s): account_closure, minimum_balance, nri_account_eligibility)
+Q: Is there a penalty for prepaying my home loan early?
+  top1_similarity=0.7017 is_fallback=False
+  A: Floating-rate loans taken by individual borrowers for non-business purposes, such as most home and auto loans, cannot carry a prepayment or foreclosure penalty under current regulatory guidelines, whether the prepayment is partial or full. Fixed-rate loans and loans taken for business purposes may still attract a prepayment penalty, typically between 2% and 5% of the outstanding principal, to compensate the lender for the interest income lost. Borrowers may choose a tenure between 12 and 360 months depending on the loan type, and a longer tenure lowers the EMI amount but increases the total interest paid over the life of the loan. Any change to the interest rate, such as a floating-rate reset, triggers a recalculation of the EMI or the remaining tenure, and the borrower is notified of the revised schedule at least 15 days in advance. (Source(s): emi_calculation, prepayment_penalty)
+Q (out-of-scope): What is the weather like in Paris today?
+  top1_similarity=0.0800 is_fallback=True
+  A: I don't have enough information in the knowledge base to answer that confidently. Please rephrase your question or contact support for topics outside loan/account policy.
+PASS: out-of-scope query correctly triggered the fallback.

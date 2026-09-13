@@ -1,0 +1,25 @@
+Part 3, Task 12: structured JSON-Lines logging with trace ID + timing, PII masked before write
+Request sent (contains a raw PAN number): 'My PAN is ABCDE1234F -- what documents do I need for KYC verification?'
+Response status: 200
+Logged entry: {
+  "trace_id": "7f063fb0-7053-4455-9ac5-692ea614471e",
+  "timestamp": 1789305356.8454618,
+  "endpoint": "/ask",
+  "duration_ms": 98.79,
+  "request": {
+    "query": "My PAN is [PAN_REDACTED] -- what documents do I need for KYC verification?",
+    "session_id": null
+  },
+  "response": {
+    "answer": "Current Task: My PAN is [PAN_REDACTED] -- what documents do I need for KYC verification?\n\nThis is the expected criteria for your final answer: A JSON object with fields: answer, sources, confidence.\nyou MUST return the actual complete content as the final answer, not a summary.\n\nThis is the context you're working with:\ntwo years of income tax returns and audited financial statements. A recent passport-sized photograph and a canceled cheque or bank statement for the account to be linked are also mandatory. KYC records must be refreshed Demo-only addendum. This is a test document added at runtime. It covers a hypothetical new policy topic. A joint account can be opened by two or more individuals, most commonly spouses, family members, or business partners, and each holder must independently complete KYC verification before the account is activated. The (Source(s): demo_extra_topic, joint_account_rules, kyc_requirements)\n\n----------\n\nNo loan application record_id was found in the request.\n\nProvide your complete response:",
+    "sources": [
+      "demo_extra_topic",
+      "joint_account_rules",
+      "kyc_requirements"
+    ],
+    "confidence": 0.85,
+    "cache_hit": false,
+    "trace_id": "7f063fb0-7053-4455-9ac5-692ea614471e"
+  }
+}
+PASS: log entry has a trace_id and duration_ms, and the raw PAN number is not present anywhere in the logged JSON.

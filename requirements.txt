@@ -1,0 +1,15 @@
+crewai
+autogen-agentchat
+autogen-core
+langchain-core
+langchain-text-splitters
+langchain-chroma
+chromadb
+sentence-transformers
+numpy
+fastapi
+uvicorn[standard]
+pydantic
+python-dotenv
+pytest
+httpx

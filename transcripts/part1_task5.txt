@@ -1,0 +1,39 @@
+Part 1, Task 5: Precision/recall comparison across both chunking strategies
+
+Collection: kb_fixed
+  Query: What documents do I need for KYC verification?
+    relevant=['kyc_requirements'] retrieved=['joint_account_rules', 'kyc_requirements']
+    precision = 1/2 = 0.500   recall = 1/1 = 1.000
+  Query: How is my EMI calculated?
+    relevant=['emi_calculation'] retrieved=['emi_calculation']
+    precision = 1/1 = 1.000   recall = 1/1 = 1.000
+  Query: What fees apply to my credit card?
+    relevant=['credit_card_fees'] retrieved=['credit_card_fees']
+    precision = 1/1 = 1.000   recall = 1/1 = 1.000
+  Query: Can I close my savings account anytime?
+    relevant=['account_closure'] retrieved=['account_closure']
+    precision = 1/1 = 1.000   recall = 1/1 = 1.000
+  Query: Is there a penalty for prepaying my home loan early?
+    relevant=['prepayment_penalty'] retrieved=['prepayment_penalty']
+    precision = 1/1 = 1.000   recall = 1/1 = 1.000
+  Average precision: 0.900   Average recall: 1.000
+
+Collection: kb_sentence
+  Query: What documents do I need for KYC verification?
+    relevant=['kyc_requirements'] retrieved=['joint_account_rules', 'kyc_requirements']
+    precision = 1/2 = 0.500   recall = 1/1 = 1.000
+  Query: How is my EMI calculated?
+    relevant=['emi_calculation'] retrieved=['account_closure', 'credit_score_factors', 'emi_calculation']
+    precision = 1/3 = 0.333   recall = 1/1 = 1.000
+  Query: What fees apply to my credit card?
+    relevant=['credit_card_fees'] retrieved=['credit_card_fees', 'minimum_balance']
+    precision = 1/2 = 0.500   recall = 1/1 = 1.000
+  Query: Can I close my savings account anytime?
+    relevant=['account_closure'] retrieved=['account_closure', 'minimum_balance', 'nri_account_eligibility']
+    precision = 1/3 = 0.333   recall = 1/1 = 1.000
+  Query: Is there a penalty for prepaying my home loan early?
+    relevant=['prepayment_penalty'] retrieved=['emi_calculation', 'prepayment_penalty']
+    precision = 1/2 = 0.500   recall = 1/1 = 1.000
+  Average precision: 0.433   Average recall: 1.000
+
+Recommendation: deploy the 'kb_fixed' collection. It achieves average precision=0.900, recall=1.000 versus 'kb_sentence' at precision=0.433, recall=1.000 on the same 5 queries. Sentence-based chunks tend to stay within one coherent policy statement, which reduces the chance a chunk drags in an unrelated neighboring sentence, while fixed-size chunks can straddle a sentence boundary and dilute the embedding; the higher of the two average scores above should be used to finalize this choice against the numbers actually observed at run time.

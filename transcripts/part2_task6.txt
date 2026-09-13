@@ -1,0 +1,13 @@
+Part 2, Task 6: check_loan_application_status + designed escalation_score
+Formula: escalation_score = 0.7 * flagged_for_fraud_review + 0.3 * (days_since_created / 30)
+Escalation threshold: 0.5
+80th percentile of days_since_created in the generated dataset: 24.0
+Justification: any fraud-flagged record scores >= 0.7 (always escalates); any unflagged record scores <= 0.3 (never escalates on age alone) -- 0.5 sits cleanly in the gap between those two clusters.
+Sample lookups (flagged records):
+  {'record_id': 'LN0009', 'found': True, 'status': 'Submitted', 'loan_amount_inr': 322042, 'escalation_score': 0.72, 'escalation_recommended': True}
+  {'record_id': 'LN0010', 'found': True, 'status': 'Approved', 'loan_amount_inr': 1042403, 'escalation_score': 0.85, 'escalation_recommended': True}
+Sample lookups (unflagged records):
+  {'record_id': 'LN0001', 'found': True, 'status': 'Rejected', 'loan_amount_inr': 7354094, 'escalation_score': 0.08, 'escalation_recommended': False}
+  {'record_id': 'LN0002', 'found': True, 'status': 'Disbursed', 'loan_amount_inr': 2281124, 'escalation_score': 0.13, 'escalation_recommended': False}
+Lookup for a non-existent record:
+  {'record_id': 'LN9999', 'found': False, 'error': "No application found with record_id='LN9999'"}

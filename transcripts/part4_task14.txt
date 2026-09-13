@@ -1,0 +1,7 @@
+Part 4, Task 14: Autogen 2-agent RoundRobinGroupChat review stage
+--- Case 1: draft has no unsupported claims -> approved unchanged ---
+Verdict: {"approved":true,"final_answer":"Personal loan applicants must be salaried with a minimum monthly income of INR 25,000.","reason":"Draft is consistent with the retrieved context."}
+PASS: draft approved unchanged.
+--- Case 2: draft has a deliberately injected ungrounded claim -> revised ---
+Verdict: {"approved":false,"final_answer":"Your loan is [claim removed: not supported by retrieved context] with [claim removed: not supported by retrieved context] and [claim removed: not supported by retrieved context].","reason":"Revised to remove unsupported claim(s). Draft contains claim(s) not supported by retrieved context: guaranteed approval, no documentation required, zero interest."}
+PASS: draft caught and revised.

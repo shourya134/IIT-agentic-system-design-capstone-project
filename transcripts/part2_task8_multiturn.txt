@@ -1,0 +1,6 @@
+Part 2, Task 8: multi-turn session memory (state CARRIED across turns)
+
+User: My record id is LN0007.
+Assistant: Got it, I've noted your record ID as LN0007 for this conversation.
+User: What is my record id?
+Assistant: Your record ID for this conversation is LN0007.

@@ -1,0 +1,16 @@
+Part 1, Task 1: Deterministic loan-application dataset
+Total records: 48
+Category counts:
+  Personal Loan: 10
+  Home Loan: 10
+  Auto Loan: 10
+  Education Loan: 9
+  Business Loan: 9
+Status counts:
+  Submitted: 10
+  Under Review: 10
+  Approved: 10
+  Rejected: 9
+  Disbursed: 9
+Fraud-flagged: 12/48 = 25.0% (must be in [10%, 30%])
+Saved 48 records to data/generated/loan_applications.json

@@ -1,0 +1,386 @@
+[
+  {
+    "record_id": "LN0001",
+    "category": "Business Loan",
+    "status": "Rejected",
+    "loan_amount_inr": 7354094,
+    "days_since_created": 8,
+    "flagged_for_fraud_review": false
+  },
+  {
+    "record_id": "LN0002",
+    "category": "Education Loan",
+    "status": "Disbursed",
+    "loan_amount_inr": 2281124,
+    "days_since_created": 13,
+    "flagged_for_fraud_review": false
+  },
+  {
+    "record_id": "LN0003",
+    "category": "Business Loan",
+    "status": "Submitted",
+    "loan_amount_inr": 9592781,
+    "days_since_created": 15,
+    "flagged_for_fraud_review": false
+  },
+  {
+    "record_id": "LN0004",
+    "category": "Personal Loan",
+    "status": "Disbursed",
+    "loan_amount_inr": 294644,
+    "days_since_created": 8,
+    "flagged_for_fraud_review": false
+  },
+  {
+    "record_id": "LN0005",
+    "category": "Home Loan",
+    "status": "Approved",
+    "loan_amount_inr": 6927915,
+    "days_since_created": 2,
+    "flagged_for_fraud_review": false
+  },
+  {
+    "record_id": "LN0006",
+    "category": "Business Loan",
+    "status": "Disbursed",
+    "loan_amount_inr": 6868108,
+    "days_since_created": 9,
+    "flagged_for_fraud_review": false
+  },
+  {
+    "record_id": "LN0007",
+    "category": "Personal Loan",
+    "status": "Approved",
+    "loan_amount_inr": 522193,
+    "days_since_created": 10,
+    "flagged_for_fraud_review": false
+  },
+  {
+    "record_id": "LN0008",
+    "category": "Business Loan",
+    "status": "Disbursed",
+    "loan_amount_inr": 5358146,
+    "days_since_created": 0,
+    "flagged_for_fraud_review": false
+  },
+  {
+    "record_id": "LN0009",
+    "category": "Auto Loan",
+    "status": "Submitted",
+    "loan_amount_inr": 322042,
+    "days_since_created": 2,
+    "flagged_for_fraud_review": true
+  },
+  {
+    "record_id": "LN0010",
+    "category": "Education Loan",
+    "status": "Approved",
+    "loan_amount_inr": 1042403,
+    "days_since_created": 15,
+    "flagged_for_fraud_review": true
+  },
+  {
+    "record_id": "LN0011",
+    "category": "Personal Loan",
+    "status": "Under Review",
+    "loan_amount_inr": 294633,
+    "days_since_created": 0,
+    "flagged_for_fraud_review": false
+  },
+  {
+    "record_id": "LN0012",
+    "category": "Business Loan",
+    "status": "Submitted",
+    "loan_amount_inr": 647733,
+    "days_since_created": 3,
+    "flagged_for_fraud_review": false
+  },
+  {
+    "record_id": "LN0013",
+    "category": "Education Loan",
+    "status": "Submitted",
+    "loan_amount_inr": 520185,
+    "days_since_created": 9,
+    "flagged_for_fraud_review": false
+  },
+  {
+    "record_id": "LN0014",
+    "category": "Home Loan",
+    "status": "Submitted",
+    "loan_amount_inr": 6257655,
+    "days_since_created": 25,
+    "flagged_for_fraud_review": true
+  },
+  {
+    "record_id": "LN0015",
+    "category": "Home Loan",
+    "status": "Under Review",
+    "loan_amount_inr": 18237354,
+    "days_since_created": 3,
+    "flagged_for_fraud_review": false
+  },
+  {
+    "record_id": "LN0016",
+    "category": "Education Loan",
+    "status": "Approved",
+    "loan_amount_inr": 2989118,
+    "days_since_created": 30,
+    "flagged_for_fraud_review": false
+  },
+  {
+    "record_id": "LN0017",
+    "category": "Education Loan",
+    "status": "Rejected",
+    "loan_amount_inr": 1370800,
+    "days_since_created": 9,
+    "flagged_for_fraud_review": false
+  },
+  {
+    "record_id": "LN0018",
+    "category": "Home Loan",
+    "status": "Under Review",
+    "loan_amount_inr": 13697888,
+    "days_since_created": 27,
+    "flagged_for_fraud_review": false
+  },
+  {
+    "record_id": "LN0019",
+    "category": "Education Loan",
+    "status": "Under Review",
+    "loan_amount_inr": 2578821,
+    "days_since_created": 23,
+    "flagged_for_fraud_review": true
+  },
+  {
+    "record_id": "LN0020",
+    "category": "Home Loan",
+    "status": "Disbursed",
+    "loan_amount_inr": 14591146,
+    "days_since_created": 20,
+    "flagged_for_fraud_review": false
+  },
+  {
+    "record_id": "LN0021",
+    "category": "Home Loan",
+    "status": "Submitted",
+    "loan_amount_inr": 11942767,
+    "days_since_created": 1,
+    "flagged_for_fraud_review": false
+  },
+  {
+    "record_id": "LN0022",
+    "category": "Auto Loan",
+    "status": "Under Review",
+    "loan_amount_inr": 1702753,
+    "days_since_created": 28,
+    "flagged_for_fraud_review": true
+  },
+  {
+    "record_id": "LN0023",
+    "category": "Home Loan",
+    "status": "Submitted",
+    "loan_amount_inr": 3468043,
+    "days_since_created": 19,
+    "flagged_for_fraud_review": false
+  },
+  {
+    "record_id": "LN0024",
+    "category": "Personal Loan",
+    "status": "Submitted",
+    "loan_amount_inr": 760558,
+    "days_since_created": 2,
+    "flagged_for_fraud_review": true
+  },
+  {
+    "record_id": "LN0025",
+    "category": "Personal Loan",
+    "status": "Disbursed",
+    "loan_amount_inr": 642926,
+    "days_since_created": 4,
+    "flagged_for_fraud_review": false
+  },
+  {
+    "record_id": "LN0026",
+    "category": "Auto Loan",
+    "status": "Approved",
+    "loan_amount_inr": 867097,
+    "days_since_created": 8,
+    "flagged_for_fraud_review": false
+  },
+  {
+    "record_id": "LN0027",
+    "category": "Auto Loan",
+    "status": "Rejected",
+    "loan_amount_inr": 669803,
+    "days_since_created": 25,
+    "flagged_for_fraud_review": true
+  },
+  {
+    "record_id": "LN0028",
+    "category": "Business Loan",
+    "status": "Under Review",
+    "loan_amount_inr": 9073393,
+    "days_since_created": 28,
+    "flagged_for_fraud_review": false
+  },
+  {
+    "record_id": "LN0029",
+    "category": "Personal Loan",
+    "status": "Rejected",
+    "loan_amount_inr": 196940,
+    "days_since_created": 23,
+    "flagged_for_fraud_review": false
+  },
+  {
+    "record_id": "LN0030",
+    "category": "Business Loan",
+    "status": "Rejected",
+    "loan_amount_inr": 2087586,
+    "days_since_created": 4,
+    "flagged_for_fraud_review": false
+  },
+  {
+    "record_id": "LN0031",
+    "category": "Home Loan",
+    "status": "Approved",
+    "loan_amount_inr": 10059748,
+    "days_since_created": 6,
+    "flagged_for_fraud_review": false
+  },
+  {
+    "record_id": "LN0032",
+    "category": "Auto Loan",
+    "status": "Under Review",
+    "loan_amount_inr": 1523002,
+    "days_since_created": 27,
+    "flagged_for_fraud_review": true
+  },
+  {
+    "record_id": "LN0033",
+    "category": "Education Loan",
+    "status": "Submitted",
+    "loan_amount_inr": 551797,
+    "days_since_created": 24,
+    "flagged_for_fraud_review": false
+  },
+  {
+    "record_id": "LN0034",
+    "category": "Education Loan",
+    "status": "Submitted",
+    "loan_amount_inr": 2722769,
+    "days_since_created": 22,
+    "flagged_for_fraud_review": true
+  },
+  {
+    "record_id": "LN0035",
+    "category": "Personal Loan",
+    "status": "Approved",
+    "loan_amount_inr": 657559,
+    "days_since_created": 13,
+    "flagged_for_fraud_review": false
+  },
+  {
+    "record_id": "LN0036",
+    "category": "Auto Loan",
+    "status": "Approved",
+    "loan_amount_inr": 346814,
+    "days_since_created": 2,
+    "flagged_for_fraud_review": false
+  },
+  {
+    "record_id": "LN0037",
+    "category": "Auto Loan",
+    "status": "Approved",
+    "loan_amount_inr": 1645151,
+    "days_since_created": 19,
+    "flagged_for_fraud_review": false
+  },
+  {
+    "record_id": "LN0038",
+    "category": "Auto Loan",
+    "status": "Under Review",
+    "loan_amount_inr": 1818493,
+    "days_since_created": 13,
+    "flagged_for_fraud_review": false
+  },
+  {
+    "record_id": "LN0039",
+    "category": "Personal Loan",
+    "status": "Under Review",
+    "loan_amount_inr": 250934,
+    "days_since_created": 4,
+    "flagged_for_fraud_review": false
+  },
+  {
+    "record_id": "LN0040",
+    "category": "Business Loan",
+    "status": "Rejected",
+    "loan_amount_inr": 8507445,
+    "days_since_created": 22,
+    "flagged_for_fraud_review": false
+  },
+  {
+    "record_id": "LN0041",
+    "category": "Home Loan",
+    "status": "Rejected",
+    "loan_amount_inr": 16975482,
+    "days_since_created": 1,
+    "flagged_for_fraud_review": true
+  },
+  {
+    "record_id": "LN0042",
+    "category": "Education Loan",
+    "status": "Under Review",
+    "loan_amount_inr": 3945713,
+    "days_since_created": 29,
+    "flagged_for_fraud_review": false
+  },
+  {
+    "record_id": "LN0043",
+    "category": "Business Loan",
+    "status": "Rejected",
+    "loan_amount_inr": 3697413,
+    "days_since_created": 1,
+    "flagged_for_fraud_review": false
+  },
+  {
+    "record_id": "LN0044",
+    "category": "Personal Loan",
+    "status": "Disbursed",
+    "loan_amount_inr": 445508,
+    "days_since_created": 5,
+    "flagged_for_fraud_review": false
+  },
+  {
+    "record_id": "LN0045",
+    "category": "Auto Loan",
+    "status": "Disbursed",
+    "loan_amount_inr": 745438,
+    "days_since_created": 10,
+    "flagged_for_fraud_review": false
+  },
+  {
+    "record_id": "LN0046",
+    "category": "Home Loan",
+    "status": "Disbursed",
+    "loan_amount_inr": 9668682,
+    "days_since_created": 8,
+    "flagged_for_fraud_review": true
+  },
+  {
+    "record_id": "LN0047",
+    "category": "Auto Loan",
+    "status": "Rejected",
+    "loan_amount_inr": 1240039,
+    "days_since_created": 11,
+    "flagged_for_fraud_review": false
+  },
+  {
+    "record_id": "LN0048",
+    "category": "Personal Loan",
+    "status": "Approved",
+    "loan_amount_inr": 153189,
+    "days_since_created": 24,
+    "flagged_for_fraud_review": true
+  }
+]

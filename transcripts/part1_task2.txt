@@ -1,0 +1,16 @@
+Part 1, Task 2: Knowledge-base document coverage
+Loaded 12 documents: ['account_closure', 'credit_card_fees', 'credit_score_factors', 'emi_calculation', 'fraud_dispute_resolution', 'interest_rate_slabs', 'joint_account_rules', 'kyc_requirements', 'loan_eligibility', 'minimum_balance', 'nri_account_eligibility', 'prepayment_penalty']
+Required topics covered: 12/12
+All 12 required topics are present.
+  account_closure: ~5 sentences, 951 chars
+  credit_card_fees: ~5 sentences, 911 chars
+  credit_score_factors: ~5 sentences, 961 chars
+  emi_calculation: ~4 sentences, 820 chars
+  fraud_dispute_resolution: ~5 sentences, 1063 chars
+  interest_rate_slabs: ~5 sentences, 920 chars
+  joint_account_rules: ~5 sentences, 1037 chars
+  kyc_requirements: ~5 sentences, 983 chars
+  loan_eligibility: ~5 sentences, 798 chars
+  minimum_balance: ~5 sentences, 977 chars
+  nri_account_eligibility: ~5 sentences, 1136 chars
+  prepayment_penalty: ~5 sentences, 992 chars
